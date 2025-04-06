@@ -8,7 +8,9 @@ const productRoutes = require("./routes/productRoutes");
 const cartRoutes = require("./routes/cartRoutes");
 const orderRoutes = require('./routes/orderRoutes');
 const sellerRoutes = require("./routes/sellerRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 
+app.use("/api", adminRoutes); // /api/admin/orders 등
 app.use("/api", sellerRoutes); // /api/seller/orders
 app.use('/api/orders', orderRoutes);
 app.use("/api/cart", cartRoutes);
